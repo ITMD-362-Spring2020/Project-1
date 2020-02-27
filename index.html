@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sales Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <header>
+            <nav>
+                <h2>ITMD-4/565 Lab 1 - Alif Ishmam - aishmam@hawk.iit.edu</h2>
+                <h1>Sales Tax Calculator</h1>
+            </nav>
+         </header>
+    </div>
+    <div class="userInputFields">
+        <div class="instructions">
+            <p>Enter Subtotal and Tax Rate and click the Calculate button to show the sales tax amount and the total. Click the clear button to clear out all for fields. Tax rate should be percentage but do not enter a % sign in the tax rate.</p>
+    
+        </div>
+
+        
+
+        <div class="formInput">
+            
+
+            <form>
+                <label for="subtotal">Sub Total</label>
+                <input type="number" id="subtotal" value = 0 >
+            
+                <label for="Tax Rate">Tax Rate (Enter in %) </label>
+                <input type="number" id="taxRate" value = 0 >
+            
+                <label for="Sales Tax">Sales Tax</label>
+                <input type="number" id="salesTax" value = 0.12 disabled> 
+                <!-- The sales tax is hard coded at 12 percent -->
+
+                <label for="Total">Total</label>
+                <input type="number" id="total" value = 0  disabled>
+              </form>
+        </div>
+
+        <div class="buttons" >
+                <button type="submit" id = "calculateBtn">Calculate Tax and Total</button>
+                <button type="submit" id = "clearBtn">Clear</button>
+        </div>
+
+        <div class="wrapper">
+            <img src="calculate.png" alt="">
+        </div>  
+    </div>
+
+    
+    <footer>
+        <p>© 2020 Alif Ishmam | aishmam@hawk.iit.edu</p>
+    </footer>
+
+<script>
+    
+
+let subtotal = document.getElementById("subtotal");
+let taxRate = document.getElementById("taxRate");
+let  SalesTax = document.getElementById("salesTax");
+let  total = document.getElementById("total");
+const calculateBtn = document.getElementById("calculateBtn");
+const clearBtn = document.getElementById("clearBtn");
+
+
+console.log(parseFloat(subtotal.value) + parseFloat(taxRate.value));
+
+calculateBtn.addEventListener("click", () => {
+    if( (parseFloat(subtotal.value)  > 0)  &&  ( (parseFloat(taxRate.value)  > 0)  && (parseFloat(taxRate.value)  < 20) )) {
+    total.value = (parseFloat(subtotal.value) + (parseFloat((taxRate.value)/100)* parseFloat(subtotal.value)) + parseFloat(SalesTax.value)*parseFloat(subtotal.value));
+    }
+    else {
+        alert("Invalid input");
+    }
+});
+
+clearBtn.addEventListener("click", () => {
+    subtotal.value = null;
+    taxRate.value = null;
+    total.value = null;
+});
+
+</script>
+
+
+</body>
+</html>
