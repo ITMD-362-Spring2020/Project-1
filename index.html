@@ -12,14 +12,14 @@
     <div>
         <header>
             <nav>
-                <h2>ITMD-4/565 Lab 1 - Alif Ishmam - aishmam@hawk.iit.edu</h2>
-                <h1>Sales Tax Calculator</h1>
+                <h2>362 Project 1 - Alif Ishmam - aishmam@hawk.iit.edu</h2>
+                <h1>Join Information Technology Newsletter</h1>
             </nav>
          </header>
     </div>
     <div class="userInputFields">
         <div class="instructions">
-            <p>Enter Subtotal and Tax Rate and click the Calculate button to show the sales tax amount and the total. Click the clear button to clear out all for fields. Tax rate should be percentage but do not enter a % sign in the tax rate.</p>
+            <p> Join the ITMD newsletter for the latest news and updated in IT!</p>
     
         </div>
 
@@ -28,38 +28,35 @@
         <div class="formInput">
             
 
-            <form id="myForm" method="get" action="#null">
-                <label for="subtotal">Sub Total</label>
-                <input type="number" id="subtotal" value = 0 >
+            <form>
+                <label for="Firstname">First Name</label>
+                <input type="text" id="firstName" value = "" >
             
-                <label for="Tax Rate">Tax Rate (Enter in %) </label>
-                <input type="number" id="taxRate" value = 0 >
+                <label for="lastName">Last Name </label>
+                <input type="text" id="lastName" value = "" >
             
-                <label for="Sales Tax">Sales Tax</label>
-                <input type="number" id="salesTax" value = 0.12 disabled> 
-                <!-- The sales tax is hard coded at 12 percent -->
+                <label for="email">Email </label>
+                <input type="text" id="email" value = "" > 
 
-                <label for="Total">Total</label>
-                <input type="number" id="total" value = 0  disabled>
+                <label for="Phone">Phone</label>
+                <input type="number" id="phone" value = "" >
               </form>
         </div>
 
         <div class="buttons" >
-                <button type="submit" id = "calculateBtn">Calculate Tax and Total</button>
+                <button type="submit" id = "joinBtn">Join </button>
                 <button type="submit" id = "clearBtn">Clear</button>
         </div>
 
-        <div class="wrapper">
-            <img src="images/calculate.png" alt="">
-        </div>  
+    
     </div>
 
-    
+    <script src="js/app.js"></script>
     <footer>
         <p>© 2020 Alif Ishmam | aishmam@hawk.iit.edu</p>
     </footer>
 
-<script src="js/app.js"></script>
+
 
 </body>
 </html>
