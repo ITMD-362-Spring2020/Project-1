@@ -1,27 +1,39 @@
 
 
-    let subtotal = document.getElementById("subtotal");
-    let taxRate = document.getElementById("taxRate");
-    let  SalesTax = document.getElementById("salesTax");
-    let  total = document.getElementById("total");
-    const calculateBtn = document.getElementById("calculateBtn");
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let  email = document.getElementById("email");
+    let  phone = document.getElementById("phone");
+    const joinBtn = document.getElementById("joinBtn");
     const clearBtn = document.getElementById("clearBtn");
     
     
-    console.log(parseFloat(subtotal.value) + parseFloat(taxRate.value));
     
-    calculateBtn.addEventListener("click", () => {
-        if( (parseFloat(subtotal.value)  > 0)  &&  ( (parseFloat(taxRate.value)  > 0)  && (parseFloat(taxRate.value)  < 20) )) {
-        total.value = (parseFloat(subtotal.value) + (parseFloat((taxRate.value)/100)* parseFloat(subtotal.value)) + parseFloat(SalesTax.value)*parseFloat(subtotal.value));
-        }
+    
+    joinBtn.addEventListener("click", () => {
+
+        if (firstName.value == ""){
+            alert("Please enter a First Name");
+          }
+        if (lastName.value == ""){
+            alert("Please enter a Last Name");
+          }
+        if (phone.value == ""){
+            alert("Please enter Phone Number");
+          }
+        if (email.value == ""){
+            alert("Please enter an email address");
+          }
         else {
-            alert("Invalid input");
+            alert("Thanks for joining our newsletter");
         }
+        
     });
     
     clearBtn.addEventListener("click", () => {
-        subtotal.value = null;
-        taxRate.value = null;
-        total.value = null;
+        firstName.value = "";
+        lastName.value = "";
+        email.value = "";
+        phone.value = "";
     });
     
