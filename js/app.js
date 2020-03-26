@@ -24,7 +24,7 @@
         else if (email.value == ""){
             alert("Please enter an email address");
           }
-        else if {
+        else  {
             alert("Thanks for joining our newsletter");
         }
         
