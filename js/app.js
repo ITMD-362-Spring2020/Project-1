@@ -15,16 +15,16 @@
         if (firstName.value == ""){
             alert("Please enter a First Name");
           }
-        if (lastName.value == ""){
+         else if (lastName.value == ""){
             alert("Please enter a Last Name");
           }
-        if (phone.value == ""){
+        else if (phone.value == ""){
             alert("Please enter Phone Number");
           }
-        if (email.value == ""){
+        else if (email.value == ""){
             alert("Please enter an email address");
           }
-        else {
+        else if {
             alert("Thanks for joining our newsletter");
         }
         
